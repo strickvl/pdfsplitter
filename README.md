@@ -4,6 +4,11 @@
 
 This file will become your README and also the index of your documentation.
 
+```python
+%load_ext autoreload
+%autoreload 2
+```
+
 ## Install
 
 `pip install pdfsplitter`
