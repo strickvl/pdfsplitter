@@ -1,5 +1,5 @@
-# Project name here
-> Summary description here.
+# pdfsplitter
+> A simple way to extract and parse images for machine learning workflows.
 
 
 This file will become your README and also the index of your documentation.
