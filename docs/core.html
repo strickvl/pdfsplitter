@@ -47,84 +47,21 @@ nb_path: "00_core.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Our base functionality is fairly simple. It must be able to the following:</p>
+<ul>
+<li>open a PDF file</li>
+<li>iterate through the pages of the file</li>
+<li>for each page, save that page with a counter str on the end as an image file</li>
+</ul>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="say_hello" class="doc_header"><code>say_hello</code><a href="https://github.com/strickvl/pdfsplitter/tree/main/pdfsplitter/core.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>say_hello</code>(<strong><code>to</code></strong>)</p>
-</blockquote>
-<p>Say hello to somebody</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">say_hello</span><span class="p">(</span><span class="s2">&quot;Sylvain&quot;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;Hello Sylvain!&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="n">say_hello</span><span class="p">(</span><span class="s2">&quot;Jeremy&quot;</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;Hello Jeremy!&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
 
 </div>
     {% endraw %}
@@ -140,9 +77,10 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="HelloSayer" class="doc_header"><code>class</code> <code>HelloSayer</code><a href="https://github.com/strickvl/pdfsplitter/tree/main/pdfsplitter/core.py#L11" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>HelloSayer</code>(<strong><code>to</code></strong>)</p>
+<h4 id="pdf_to_img" class="doc_header"><code>pdf_to_img</code><a href="https://github.com/strickvl/pdfsplitter/tree/main/pdfsplitter/core.py#L13" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>pdf_to_img</code>(<strong><code>pdf_path</code></strong>:<code>PathLike[Any]</code>, <strong><code>destination_path</code></strong>:<code>PathLike[Any]</code>, <strong><code>img_type</code></strong>:<code>str</code>, <strong><code>export_quality_factor</code></strong>=<em><code>2.0</code></em>)</p>
 </blockquote>
-<p>Say hello to <code>to</code> using <a href="/pdfsplitter/core.html#say_hello"><code>say_hello</code></a></p>
+<p>Converts a PDF file into a series of image files.</p>
+<p>Each image file is labelled with its page number</p>
 
 </div>
 
@@ -172,9 +110,13 @@ nb_path: "00_core.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="HelloSayer.say" class="doc_header"><code>HelloSayer.say</code><a href="https://github.com/strickvl/pdfsplitter/tree/main/pdfsplitter/core.py#L15" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>HelloSayer.say</code>()</p>
+<h4 id="extract_images_from_pdfs" class="doc_header"><code>extract_images_from_pdfs</code><a href="https://github.com/strickvl/pdfsplitter/tree/main/pdfsplitter/core.py#L26" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>extract_images_from_pdfs</code>(<strong><code>source_folder</code></strong>:<code>PathLike[Any]</code>, <strong><code>destination_folder</code></strong>:<code>PathLike[Any]</code>, <strong><code>img_type</code></strong>:<code>str</code>, <strong><code>export_quality_factor</code></strong>=<em><code>2.0</code></em>)</p>
 </blockquote>
-<p>Do the saying</p>
+<p>Converts all PDF files inside a particular source folder into individual image files.</p>
+<p>Each PDF file exports a single image for each page.
+You can specify the type of image you want. See
+<a href="https://pymupdf.readthedocs.io/en/latest/faq.html#how-to-convert-images">https://pymupdf.readthedocs.io/en/latest/faq.html#how-to-convert-images</a> for
+a full list of support export options.</p>
 
 </div>
 
@@ -189,17 +131,13 @@ nb_path: "00_core.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">HelloSayer</span><span class="p">(</span><span class="s2">&quot;Alexis&quot;</span><span class="p">)</span>
-<span class="n">o</span><span class="o">.</span><span class="n">say</span><span class="p">()</span>
-</pre></div>
+</div>
+    {% endraw %}
 
-    </div>
-</div>
-</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
@@ -207,13 +145,57 @@ nb_path: "00_core.ipynb"
 <div class="output_area">
 
 
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="say_name" class="doc_header"><code>say_name</code><a href="https://github.com/strickvl/pdfsplitter/tree/main/pdfsplitter/core.py#L38" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>say_name</code>(<strong><code>name</code></strong>=<em><code>'alex'</code></em>)</p>
+</blockquote>
 
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;Hello Alexis!&#39;</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">source</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./tryout/&quot;</span><span class="p">)</span>
+<span class="n">destination</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;./tryout/processed&quot;</span><span class="p">)</span>
+<span class="n">extract_images_from_pdfs</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="s2">&quot;png&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># assert say_hello(&quot;Jeremy&quot;)==&quot;Hello Jeremy!&quot;</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

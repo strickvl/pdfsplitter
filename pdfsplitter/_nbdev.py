@@ -3,7 +3,8 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"pdf_to_img": "00_core.ipynb",
-         "extract_images_from_pdfs": "00_core.ipynb"}
+         "extract_images_from_pdfs": "00_core.ipynb",
+         "say_name": "00_core.ipynb"}
 
 modules = ["core.py"]
 

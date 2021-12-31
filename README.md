@@ -4,26 +4,27 @@
 
 This file will become your README and also the index of your documentation.
 
-```python
-%load_ext autoreload
-%autoreload 2
-```
-
 ## Install
 
-`pip install pdfsplitter`
+`pip install --upgrade pdfsplitter`
 
 ## How to use
 
-Fill me in please! Don't forget code examples:
+The highest-level function for exporting image files from a series of images is `extract_images_from_pdfs`, which will take all the PDF files inside a source directory and extract the images to a destination directory. You have the added option of specifying which sort of image filetype you'd like for the exported images, as in this example:
 
 ```python
-1+1
+source = Path("./tryout/")
+destination = Path("./tryout/processed")
+
+extract_images_from_pdfs(source, destination, "jpg")
 ```
 
+## What is pdfsplitter?
 
+## Features
 
+## Install
 
-    2
+## How to use
 
-
+## Roadmap
