@@ -1,6 +1,7 @@
 {
   "pdfsplitter": {
     "Overview": "/",
-    "pdfsplitter": "core.html"
+    "pdfsplitter": "core.html",
+    "stats": "stats.html"
   }
 }

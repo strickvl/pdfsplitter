@@ -2,9 +2,12 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"pdf_to_img": "01_stats.ipynb",
-         "extract_images_from_pdfs": "01_stats.ipynb",
-         "say_name": "00_core.ipynb"}
+index = {"pdf_to_img": "00_core.ipynb",
+         "extract_images_from_pdfs": "00_core.ipynb",
+         "say_name": "00_core.ipynb",
+         "get_page_count": "01_stats.ipynb",
+         "add_comma_separation": "01_stats.ipynb",
+         "get_stats": "01_stats.ipynb"}
 
 modules = ["core.py",
            "stats.py"]

@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: pdfsplitter
       url: core.html
+    - output: web,pdf
+      title: stats
+      url: stats.html
     output: web
     title: pdfsplitter
   output: web
