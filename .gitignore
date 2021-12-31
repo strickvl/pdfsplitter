@@ -143,3 +143,6 @@ checklink/cookies.txt
 
 # pypi
 .pypirc
+
+# testing folders
+tryout/
