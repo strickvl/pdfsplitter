@@ -6,8 +6,15 @@ index = {"pdf_to_img": "00_core.ipynb",
          "extract_images_from_pdfs": "00_core.ipynb",
          "say_name": "00_core.ipynb",
          "get_page_count": "01_stats.ipynb",
+         "get_file_metadata": "01_stats.ipynb",
          "add_comma_separation": "01_stats.ipynb",
-         "get_stats": "01_stats.ipynb"}
+         "has_ocr_layer": "01_stats.ipynb",
+         "get_stats": "01_stats.ipynb",
+         "convert_timestamp": "01_stats.ipynb",
+         "get_json_stats": "01_stats.ipynb",
+         "get_dataframe_stats": "01_stats.ipynb",
+         "export_stats_as_csv": "01_stats.ipynb",
+         "display_stats": "01_stats.ipynb"}
 
 modules = ["core.py",
            "stats.py"]
