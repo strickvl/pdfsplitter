@@ -25,6 +25,9 @@ extract_images_from_pdfs(source, destination, "jpg")
 
 ## Features
 
+- statistics generation
+- image extraction
+
 ## Install
 
 ## How to use
