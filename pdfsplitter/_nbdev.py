@@ -2,11 +2,12 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"pdf_to_img": "00_core.ipynb",
-         "extract_images_from_pdfs": "00_core.ipynb",
+index = {"pdf_to_img": "01_stats.ipynb",
+         "extract_images_from_pdfs": "01_stats.ipynb",
          "say_name": "00_core.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "stats.py"]
 
 doc_url = "https://strickvl.github.io/pdfsplitter/"
 
