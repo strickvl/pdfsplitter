@@ -18,6 +18,14 @@ from rich.console import Console
 from rich.table import Table
 
 # Cell
+import os
+import requests
+import re
+from urllib.parse import urlparse
+
+from bs4 import BeautifulSoup
+
+# Cell
 def add_scheme_and_domain(partial_url, main_source):
     """
     Given a partial url and a domain, return a full url.
