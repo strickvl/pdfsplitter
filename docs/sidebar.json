@@ -2,6 +2,7 @@
   "pdfsplitter": {
     "Overview": "/",
     "pdfsplitter": "core.html",
-    "stats": "stats.html"
+    "stats": "stats.html",
+    "scraper": "scraper.html"
   }
 }

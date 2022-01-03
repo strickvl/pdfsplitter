@@ -14,10 +14,14 @@ index = {"pdf_to_img": "00_core.ipynb",
          "get_json_stats": "01_stats.ipynb",
          "get_dataframe_stats": "01_stats.ipynb",
          "export_stats_as_csv": "01_stats.ipynb",
-         "display_stats": "01_stats.ipynb"}
+         "display_stats": "01_stats.ipynb",
+         "add_scheme_and_domain": "02_scraper.ipynb",
+         "get_pdf_links": "02_scraper.ipynb",
+         "download_pdf_files": "02_scraper.ipynb"}
 
 modules = ["core.py",
-           "stats.py"]
+           "stats.py",
+           "scraper.py"]
 
 doc_url = "https://strickvl.github.io/pdfsplitter/"
 
