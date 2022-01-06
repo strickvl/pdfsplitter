@@ -2,7 +2,15 @@
 > A simple way to extract and parse images for machine learning workflows.
 
 
-This file will become your README and also the index of your documentation.
+## What is pdfsplitter?
+
+There are lots of repeated tasks you have to perform when working with PDF files for a machine learning project. I found myself wanting a tool that could handle some of the more common parts of this. Not finding anything suitable, I built something for myself.
+
+## Features
+
+- downloading all the PDF files on a web page
+- extraction / exporting a single image file for each page of the PDF
+- statistics generation to get an overview of the total page count of the PDFs.
 
 ## Install
 
@@ -79,16 +87,3 @@ display_stats(get_stats(source))
 </pre>
 
 
-
-## What is pdfsplitter?
-
-## Features
-
-- statistics generation
-- image extraction
-
-## Install
-
-## How to use
-
-## Roadmap
