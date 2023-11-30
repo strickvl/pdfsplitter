@@ -34,10 +34,7 @@ def add_scheme_and_domain(partial_url, main_source):
     hostname = urlparse(main_source).netloc
     base_url = scheme + "://" + hostname
 
-    if partial_url[0] == "/":
-        return base_url + partial_url
-    else:
-        return partial_url
+    return base_url + partial_url if partial_url[0] == "/" else partial_url
 
 # Cell
 def get_pdf_links(url):
